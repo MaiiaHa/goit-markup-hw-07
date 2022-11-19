@@ -204,7 +204,7 @@ img {
   height: 600px;
   margin: 0 auto;
 }
-.main-text {
+.main-section__title {
   margin-top: 0; /* скидаю марджин */
   margin-bottom: 30px;
   text-align: center;
@@ -220,7 +220,7 @@ img {
   text-transform: uppercase;
   color: var(--main-background-color);
 }
-.main-btn {
+.main-section__btn {
   /* inherit добавила*/
   display: block;
   font-family: inherit;
@@ -245,9 +245,9 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.main-btn:active,
-.main-btn:hover,
-.main-btn:focus,
+.main-section__btn:active,
+.main-section__btn:hover,
+.main-section__btn:focus,
 .modal-btn:hover,
 .modal-btn:focus,
 .footer-btn:hover,
@@ -262,13 +262,13 @@ img {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.benefits-list {
+.benefits__list {
   display: flex;
 }
-.benefits-name:not(:last-child) {
+.benefits__item:not(:last-child) {
   margin-right: 30px;
 }
-.benefits-name::before {
+.benefits__item::before {
   content: '';
   display: block;
   height: 120px;
@@ -277,19 +277,19 @@ img {
   background-position: center;
   background-repeat: no-repeat;
 }
-.benefits-antenna::before {
+.benefits__item--antenna::before {
   background-image: url('../images/antenna.svg');
 }
-.benefits-clock::before {
+.benefits__item--clock::before {
   background-image: url('../images/clock.svg');
 }
-.benefits-diagram::before {
+.benefits__item--diagram::before {
   background-image: url('../images/diagram.svg');
 }
-.benefits-astronaut::before {
+.benefits__item--astronaut::before {
   background-image: url('../images/astronaut.svg');
 }
-.benefits-item {
+.benefits__title {
   margin-top: 30px;
   margin-bottom: 10px;
   font-weight: 700;
@@ -299,7 +299,7 @@ img {
   text-transform: uppercase;
   color: var(--main-font-color);
 }
-.benefits-text {
+.benefits__content {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 14px;
@@ -313,18 +313,18 @@ img {
   padding-top: 0;
   padding-bottom: 94px;
 }
-.services-list {
+.services__list {
   display: flex;
 }
-.services-item {
+.services__item {
   position: relative;
 }
-.services-item:not(:last-child) {
+.services__item:not(:last-child) {
   margin-right: 30px;
 }
-.servises-title,
-.team-title,
-.clients-title {
+.servises__title,
+.team__title,
+.clients__title {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -333,7 +333,7 @@ img {
   letter-spacing: 0.03em;
   color: var(--main-font-color);
 }
-.services-name {
+.services__name {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -356,19 +356,19 @@ img {
   padding-bottom: 94px;
   background-color: var(--section-color);
 }
-.team-list {
+.team__list {
   display: flex;
 }
-.team-item {
+.team__item {
   background-color: var(--main-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.team-item:not(:last-child) {
+.team__item:not(:last-child) {
   margin-right: 30px;
 }
-.team-member {
+.team__member {
   margin-top: 0;
   margin: 0;
   margin-bottom: 10px;
@@ -379,7 +379,7 @@ img {
   letter-spacing: 0.03em;
   color: var(--main-font-color);
 }
-.team-position {
+.team__position {
   margin: 0;
   margin-bottom: 16px;
   font-size: 16px;
@@ -391,14 +391,14 @@ img {
 .member {
   padding: 30px 0; /* 70 не поміщається і не треба */
 }
-.social-list {
+.social__list {
   display: flex;
   justify-content: center;
   gap: 10px;
   /* flex-wrap: wrap;*/
 }
 
-.social-link {
+.social__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -412,10 +412,45 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.social-link:hover,
-.social-link:focus {
+.social__link:hover,
+.social__link:focus {
   fill: var(--main-background-color);
   background-color: var(--accent-color);
+}
+
+/* ===================== OUR CLIENTS ==========================*/
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+/* .clients__title below */
+.clients__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  border-color: #afb1b8;
+}
+.clients__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  background-color: var(--main-background-color);
+  fill: var(--icon-color);
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+
+  transition-property: fill, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.clients__link:hover,
+.clients__link:focus {
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
 /* ======================== PORTFOLIO ========================= */
@@ -547,42 +582,6 @@ img {
   transform: translateY(0);
 }
 /* _________________випливаюче вікно картки end______________________ */
-
-/* ===================== OUR CLIENTS ==========================*/
-.clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.clients-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  border-color: #afb1b8;
-}
-
-.clients-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 170px;
-  height: 92px;
-  background-color: var(--main-background-color);
-  fill: var(--icon-color);
-  border: 1px solid var(--icon-color);
-  border-radius: 4px;
-
-  transition-property: fill, border;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.clients-link:hover,
-.clients-link:focus {
-  fill: var(--accent-color);
-  border: 1px solid var(--accent-color);
-}
 
 /* ======================= FOOTER ============================*/
 .footer {
