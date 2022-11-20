@@ -13,6 +13,16 @@
   }
 }
 
+$icons: 'antenna', 'clock', 'diagram', 'astronaut';
+
+@mixin generateIcons($icons) {
+  @each $iconName in $icons {
+    .benefits__item--#{$iconName}::before {
+      background-image: url('../images/#{$iconName}.svg');
+    }
+  }
+}
+
 // fs і lh передаються обов'язково, а fw і ls не обовʼязково
 // якщо fw не false, то застосовується введене значення в тілі коду
 
