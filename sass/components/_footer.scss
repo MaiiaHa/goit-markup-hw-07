@@ -1,0 +1,110 @@
+/* ======================= FOOTER ============================*/
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--footer-font);
+}
+.footer-address {
+  margin-top: 20px;
+  font-style: normal;
+}
+.address-link {
+  @include fonts(false, 14px, 24px, 0.03em);
+
+  color: var(--main-background-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+.footer-link {
+  @include fonts(false, 14px, 24px, 0.03em);
+
+  color: rgba(255, 255, 255, 0.6);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+.footer-list:not(:last-child) {
+  margin-bottom: 9px;
+}
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+.footer-title,
+.footer-mail-title {
+  margin-bottom: 20px;
+  @include fonts(700, 14px, 16px, 0.03em);
+
+  text-transform: uppercase;
+  color: var(--main-background-color);
+}
+.footer-address-container {
+  min-width: 231px;
+  margin-right: 70px;
+}
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--main-background-color);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 10px;
+}
+.footer-mail-container {
+  margin-left: auto;
+}
+/* ------------------------ footer form ----------------------- */
+.footer-form {
+  margin: right 12px;
+  display: flex;
+  gap: 12px;
+}
+
+.footer-form input {
+  @include fonts(false, 16px, 20px, 0.03em);
+
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  padding-left: 16px;
+}
+.footer-email {
+  width: 358px;
+  height: 50px;
+
+  background-color: transparent;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}

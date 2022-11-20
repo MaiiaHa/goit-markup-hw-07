@@ -1,0 +1,22 @@
+@mixin fonts($fw: false, $fs: false, $lh: false, $ls: false) {
+  @if $fw {
+    font-weight: $fw;
+  }
+  @if $fs {
+    font-size: $fs;
+  }
+  @if $lh {
+    line-height: decimal-round($lh / $fs);
+  }
+  @if $ls {
+    letter-spacing: $ls;
+  }
+}
+
+// fs і lh передаються обов'язково, а fw і ls не обовʼязково
+// якщо fw не false, то застосовується введене значення в тілі коду
+
+// --transfomation:
+// transition-property: color;
+// transition-duration: 250ms;
+// transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

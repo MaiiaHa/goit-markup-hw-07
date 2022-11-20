@@ -1,0 +1,76 @@
+/* ======================= HEADER NAV ========================= */
+.header {
+  border-bottom: 1px solid #ececec; /* рамка в нижній частині хедера */
+}
+.header-list {
+  display: flex;
+  align-items: center;
+}
+.header-nav {
+  display: flex;
+}
+.nav-menu {
+  margin-left: 93px;
+}
+.header-nav-list {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.header-nav-link {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px; /* розширюємо зону ховера і фокуса на навігації */
+  @include fonts(500, 14px, 16px, 0.02em);
+
+  color: var(--main-font-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  &.current {
+    color: var(--accent-color);
+  }
+}
+
+.header-link {
+  color: var(--secondary-font-color);
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px; /* розширюємо зону ховера і фокуса на навігації */
+  @include fonts(500, 14px, 16px, 0.02em);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+.contacts-icon {
+  margin-right: 10px;
+  fill: currentColor; /* наслідує колір батька як current так і ховер */
+}
+
+.nav-link {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+.contact-nav:not(:last-child) {
+  margin-right: 30px;
+}
