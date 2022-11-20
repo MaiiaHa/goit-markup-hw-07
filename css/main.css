@@ -255,6 +255,7 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
+  letter-spacing: 0.06em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -262,7 +263,6 @@ img {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  letter-spacing: 0.06em;
   color: var(--main-background-color);
   background-color: var(--accent-color);
   border-radius: 4px;

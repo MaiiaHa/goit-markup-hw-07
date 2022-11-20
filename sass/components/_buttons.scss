@@ -14,12 +14,11 @@
   margin-right: auto;
 
   font-family: inherit;
-  @include fonts(700, 16px, 30px, false);
+  @include fonts(700, 16px, 30px, 0.06em);
 
   display: flex;
   align-items: center;
   text-align: center;
-  letter-spacing: 0.06em;
   color: var(--main-background-color);
   background-color: var(--accent-color);
   border-radius: 4px;
@@ -83,10 +82,6 @@
 
   @include fonts(700, 16px, 30px, 0.06em);
 
-  // font-weight: 700;
-  // font-size: 16px;
-  // line-height: calc(30 / 16);
-  // letter-spacing: 0.06em;
   align-items: center;
   text-align: left;
   color: var(--additional-font-color);
