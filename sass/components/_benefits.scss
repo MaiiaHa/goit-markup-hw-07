@@ -19,18 +19,26 @@
   background-repeat: no-repeat;
 }
 
-.benefits__item--antenna::before {
-  background-image: url('../images/antenna.svg');
+%icons: 'antenna', 'clock', 'diagram', 'astronaut';
+@each $iconName in %icons {
+  .benefits__item--#{$iconName}::before: {
+    background-image: url('../images/#{$iconName}.svg');
+  }
 }
-.benefits__item--clock::before {
-  background-image: url('../images/clock.svg');
-}
-.benefits__item--diagram::before {
-  background-image: url('../images/diagram.svg');
-}
-.benefits__item--astronaut::before {
-  background-image: url('../images/astronaut.svg');
-}
+
+// .benefits__item--antenna::before {
+//   background-image: url('../images/antenna.svg');
+// }
+// .benefits__item--clock::before {
+//   background-image: url('../images/clock.svg');
+// }
+// .benefits__item--diagram::before {
+//   background-image: url('../images/diagram.svg');
+// }
+// .benefits__item--astronaut::before {
+//   background-image: url('../images/astronaut.svg');
+// }
+
 .benefits__title {
   @include fonts(700, 14px, 16px, 0.03em);
 
