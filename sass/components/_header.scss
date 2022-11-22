@@ -2,16 +2,81 @@
 .header {
   border-bottom: 1px solid #ececec; /* рамка в нижній частині хедера */
 }
+
+// меню на мобільному
+
+.menue-btn {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.icon-close {
+  display: none;
+}
+.menue-btn.is-open .icon-close {
+  display: block;
+}
+.menue-btn.is-open .icon-menue {
+  display: none;
+}
+
+// меню на мобильном кінець
+
 .header-list {
   display: flex;
   align-items: center;
 }
 .header-nav {
   display: flex;
+  @media screen and (max-width: $mobile) {
+    display: block;
+  }
 }
 .nav-menu {
   margin-left: 93px;
+
+  @media screen and (max-width: $mobile) {
+    margin-left: 0;
+  }
 }
+// випадаюче меню на моб.
+
+.menue-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 796px;
+  background-color: aqua;
+
+  text-align: center;
+  padding: 48px 40px;
+  @include fonts(500, 40px, 47px, 0.02em);
+
+  color: var(--main-font-color);
+
+  &.is-open {
+    display: block;
+  }
+}
+
+.menue-social-list {
+  display: flex;
+  padding-right: 10px;
+
+  @include fonts(500, 18px, 22px, 0.02em);
+
+  color: var(--accent-color);
+
+  &:not(:last-child) {
+    border-right: 1px solid var(--border-color);
+  }
+}
+// випадаюче меню на моб. кінець
+
 .header-nav-list {
   position: relative;
 
@@ -32,6 +97,10 @@
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (max-width: $mobile) {
+    padding-top: 0;
+  }
 
   &:hover,
   &:focus {
@@ -55,6 +124,9 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+  @media screen and (max-width: $mobile) {
+    padding-top: 0;
+  }
   &:hover,
   &:focus {
     color: var(--accent-color);
@@ -69,6 +141,10 @@
   display: flex;
   margin-left: auto;
   align-items: center;
+
+  @media screen and (max-width: $mobile) {
+    display: block;
+  }
 }
 
 .contact-nav:not(:last-child) {

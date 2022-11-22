@@ -26,38 +26,71 @@
     <header class="header">
       <div class="header-list container">
         <a class="logo link" href="./index.html"> <span class="logo-first-part">Web</span>Studio</a>
-        <nav class="nav-menu">
-          <ul class="header-nav list">
-            <li class="header-nav-list">
-              <a class="header-nav-link link current" href="./index.html">Студія</a>
+
+        <!-- Mobail view -->
+
+        <div class="menue-container is-open" id="menue-container" data-menue>
+          <button
+            class="menue-btn is-open"
+            type="button"
+            aria-expanded="false"
+            aria-controls="menue-container"
+            data-menue-btn
+          >
+            <svg width="40" height="40" aria-label="Menue switch">
+              <use class="icon-menue" href="./images/icons.svg#icon-menu"></use>
+              <use class="icon-close" href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+
+          <nav class="nav-menu">
+            <ul class="header-nav list">
+              <li class="header-nav-list">
+                <a class="header-nav-link link current" href="./index.html">Студія</a>
+              </li>
+              <li class="header-nav-list">
+                <a class="header-nav-link link" href="./portfolio.html">Портфоліо</a>
+              </li>
+              <li class="header-nav-list">
+                <a class="header-nav-link link" href="./index.html">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="nav-link list">
+            <li class="contact-nav">
+              <a class="header-link link-envelope link" href="mailto:info@devstudio.com">
+                <svg class="contacts-icon" width="16" height="12">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
             </li>
-            <li class="header-nav-list">
-              <a class="header-nav-link link" href="./portfolio.html">Портфоліо</a>
-            </li>
-            <li class="header-nav-list">
-              <a class="header-nav-link link" href="./index.html">Контакти</a>
+            <li class="contact-nav">
+              <a class="header-link link-phone link" href="tel:+380961111111">
+                <svg class="contacts-icon" width="10" height="16">
+                  <use href="./images/icons.svg#icon-phone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
 
-        <ul class="nav-link list">
-          <li class="contact-nav">
-            <a class="header-link link-envelope link" href="mailto:info@devstudio.com">
-              <svg class="contacts-icon" width="16" height="12">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="contact-nav">
-            <a class="header-link link-phone link" href="tel:+380961111111">
-              <svg class="contacts-icon" width="10" height="16">
-                <use href="./images/icons.svg#icon-phone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <ul class="menue-social-list list">
+            <li>
+              <a class="menue-social-link link" href="https://www.instagram.com/"> Instagram </a>
+            </li>
+            <li>
+              <a class="menue-social-link link" href="https://twitter.com/"> Twitter </a>
+            </li>
+            <li>
+              <a class="menue-social-link link" href="https://www.facebook.com/"> Facebook </a>
+            </li>
+            <li>
+              <a class="menue-social-link link" href="https://www.linkedin.com/"> LinkedIn </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -491,5 +524,6 @@
 
     <!-- підключили скріпт модального вікна -->
     <script src="./js/modal.js"></script>
+    <script src="./js/menue.js"></script>
   </body>
 </html>

@@ -26,8 +26,14 @@ $icons: 'antenna', 'clock', 'diagram', 'astronaut';
 // fs і lh передаються обов'язково, а fw і ls не обовʼязково
 // якщо fw не false, то застосовується введене значення в тілі коду
 
-// @mixin transitions($property, $duration, $timing) {
-//   transition-property: $property;
-//   transition-duration: $duration;
-//   transition-timing-function: $timing;
-// }
+@mixin transitions($property: false, $duration: false, $timing: false) {
+  @if $property {
+    transition-property: $property;
+  }
+  @if $duration {
+    transition-duration: $duration;
+  }
+  @if $timing {
+    transition-timing-function: $timing;
+  }
+}
