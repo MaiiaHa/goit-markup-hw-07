@@ -12,7 +12,10 @@
     flex-direction: column;
     text-align: center;
   }
-
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+    text-align: center;
+  }
   @media screen and (min-width: $desctop) {
     flex-direction: row;
     text-align: left;
@@ -24,11 +27,15 @@
   margin-bottom: 60px;
 
   @media screen and (min-width: $tablet) {
-    margin-right: 165px;
+    min-width: 232px;
+    margin-left: 60px;
+    margin-right: auto;
   }
 
   @media screen and (min-width: $desctop) {
     min-width: 231px;
+    margin-left: 0px;
+
     margin-right: 70px;
     text-align: left;
   }
@@ -39,7 +46,9 @@
   margin-bottom: 60px;
 
   @media screen and (min-width: $tablet) {
+    min-width: 206px;
     margin-right: 0px;
+    margin-left: auto;
   }
 
   @media screen and (min-width: $desctop) {
@@ -49,7 +58,9 @@
   }
 }
 .footer-mail-container {
-  margin-left: auto;
+  @media screen and (min-width: $desctop) {
+    margin-left: auto;
+  }
 }
 .footer-address {
   margin-top: 20px;
@@ -86,7 +97,6 @@
 .footer-list:not(:last-child) {
   margin-bottom: 9px;
 }
-
 .footer-title,
 .footer-mail-title {
   margin-bottom: 20px;
@@ -95,7 +105,6 @@
   text-transform: uppercase;
   color: var(--main-background-color);
 }
-
 .footer-social-link {
   display: flex;
   align-items: center;
@@ -115,7 +124,6 @@
     background-color: var(--accent-color);
   }
 }
-
 .footer-social-list {
   display: flex;
   gap: 10px;
@@ -125,13 +133,16 @@
 
 /* ------------------------ footer form ----------------------- */
 .footer-form {
+  // @media screen and (max-width: 1199px) {
+  //   width: 450px;
+  // }
+
   @media screen and (min-width: $desctop) {
     margin: right 12px;
     display: flex;
     gap: 12px;
   }
 }
-
 .footer-form input {
   @include fonts(false, 16px, 20px, 0.03em);
 
