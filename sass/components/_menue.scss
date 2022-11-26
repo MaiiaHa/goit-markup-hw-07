@@ -1,0 +1,70 @@
+// меню на мобільному
+
+.menue-btn {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  // @media screen and (min-width: 768px) {
+  //   display: none;
+  // }
+}
+.icon-close {
+  display: none;
+}
+.menue-btn.is-open .icon-close {
+  display: block;
+}
+.menue-btn.is-open .icon-menue {
+  display: none;
+}
+
+// меню на мобильном кінець
+
+// випадаюче меню на моб.
+
+// .menue-container {
+//   display: none;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 796px;
+//   background-color: aqua;
+
+//   text-align: center;
+//   padding: 48px 40px;
+//   @include fonts(500, 40px, 47px, 0.02em);
+
+//   color: var(--main-font-color);
+
+// @media screen and (max-width: 767px) {
+//   display: none;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 796px;
+//   background-color: aqua;
+// }
+
+//   &.is-open {
+//     display: block;
+//   }
+// }
+
+.menue-social-list {
+  display: flex;
+  padding-right: 10px;
+
+  @include fonts(500, 18px, 22px, 0.02em);
+
+  color: var(--accent-color);
+
+  &:not(:last-child) {
+    border-right: 1px solid var(--border-color);
+  }
+}
+// випадаюче меню на моб. кінець

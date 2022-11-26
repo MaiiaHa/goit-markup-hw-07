@@ -4,15 +4,15 @@
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto; /* або margin-left margin-right - auto */
-  /* outline: 1px solid tomato; */
+  outline: 1px solid tomato;
 
   @media screen and (min-width: $mobile) {
-    width: $mobile;
+    width: 450px;
   }
   @media screen and (min-width: $tablet) {
-    width: $tablet;
+    width: 738px;
   }
   @media screen and (min-width: $desctop) {
-    width: $desctop;
+    width: 1170px;
   }
 }
