@@ -19,6 +19,10 @@
 .nav-menu {
   margin-left: 93px;
 
+  @media screen and (max-width: $mobile) {
+    display: none;
+  }
+
   // @media screen and (max-width: $mobile) {
   //   margin-left: 0;
   // }
@@ -41,10 +45,6 @@
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-  // @media screen and (max-width: $mobile) {
-  //   padding-top: 0;
-  // }
 
   &:hover,
   &:focus {
@@ -85,6 +85,10 @@
   display: flex;
   margin-left: auto;
   align-items: center;
+
+  @media screen and (max-width: $mobile) {
+    display: none;
+  }
 
   // @media screen and (max-width: $mobile) {
   //   display: block;

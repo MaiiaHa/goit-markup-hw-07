@@ -29,5 +29,9 @@
 
     border-radius: 2px;
     background-color: var(--accent-color);
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
   }
 }
