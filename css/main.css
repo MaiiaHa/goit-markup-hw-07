@@ -1391,20 +1391,33 @@ textarea {
 
 .mobile-menue-container {
   padding: 48px 40px;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 796px;
+  background-color: rgb(124, 223, 245);
 }
 @media screen and (max-width: 767px) {
   .mobile-menue-container {
     display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 796px;
-    background-color: rgb(124, 223, 245);
+  }
+  .mobile-menue-container.is-open {
+    display: block;
   }
 }
-.mobile-menue-container.is-open {
+
+.icon-close {
+  display: none;
+}
+
+.mobile-menue-btn.is-open .icon-close {
   display: block;
+}
+
+.mobile-menue-btn.is-open .icon-menue {
+  display: none;
 }
 
 .mobile-menue-btn {
@@ -1419,17 +1432,10 @@ textarea {
   border: none;
   background-color: transparent;
 }
-
-.mobile-menue-btn.is-open .icon-close {
-  display: block;
-}
-
-.mobile-menue-btn.is-open .icon-menue {
-  display: none;
-}
-
-.icon-close {
-  display: none;
+@media screen and (min-width: 768px) {
+  .mobile-menue-btn {
+    display: none;
+  }
 }
 
 .mobile-nav-menu {

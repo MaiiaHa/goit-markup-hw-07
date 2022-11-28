@@ -1,29 +1,36 @@
 // меню на мобільному
 
 .mobile-menue-container {
-  // display: none;
-  // // position: fixed;
-  // // top: 0;
-  // // left: 0;
-  // width: 100%;
-  // height: 796px;
-  // background-color: rgb(244, 190, 161);
-
   padding: 48px 40px;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 796px;
+  background-color: rgb(124, 223, 245);
+
+  // @media screen and (min-width: $tablet) {
+  //   display: none;
+  // }
 
   @media screen and (max-width: 767px) {
     display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 796px;
-    background-color: rgb(124, 223, 245);
-  }
 
-  &.is-open {
-    display: block;
+    &.is-open {
+      display: block;
+    }
   }
+}
+.icon-close {
+  display: none;
+}
+
+.mobile-menue-btn.is-open .icon-close {
+  display: block;
+}
+.mobile-menue-btn.is-open .icon-menue {
+  display: none;
 }
 .mobile-menue-btn {
   position: absolute;
@@ -35,18 +42,9 @@
   border: none;
   background-color: transparent;
 
-  // @media screen and (min-width: 768px) {
-  //   display: none;
-  // }
-}
-.mobile-menue-btn.is-open .icon-close {
-  display: block;
-}
-.mobile-menue-btn.is-open .icon-menue {
-  display: none;
-}
-.icon-close {
-  display: none;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 // навігація мобільного меню
