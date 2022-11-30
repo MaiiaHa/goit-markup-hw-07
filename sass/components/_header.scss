@@ -23,16 +23,9 @@
     display: block;
     margin-left: 93px;
   }
-
-  // @media screen and (max-width: $mobile) {
-  //   margin-left: 0;
-  // }
 }
 .header-nav {
   display: flex;
-  // @media screen and (max-width: $mobile) {
-  //   display: block;
-  // }
 }
 .header-nav-link {
   display: flex;
@@ -94,7 +87,7 @@
   margin-left: auto;
   align-items: center;
 
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: 767px) {
     display: none;
   }
 

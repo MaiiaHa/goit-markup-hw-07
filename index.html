@@ -59,11 +59,19 @@
             >
           </li>
         </ul>
+
+        <!-- Mobile menu button  -->
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="40" height="40" aria-label="Menue switch">
+            <use class="js-open-menu" href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <!-- Mobile menu button end -->
       </div>
 
-      <!-- Mobail menu view -->
+      <!-- Mobail menu view (first version) -->
       <!-- 
-      <div class="mobile-menue-container" id="mobile-menu" data-menue>
+        <div class="mobile-menue-container" id="mobile-menu" data-menue>
         <button
           class="mobile-menue-btn js-open-menu"
           type="button"
@@ -75,58 +83,18 @@
             <use class="js-open-menu" href="./images/icons.svg#icon-menu"></use>
             <use class="js-close-menu" href="./images/icons.svg#icon-close"></use>
           </svg>
-        </button>
-
-        <nav class="mobile-nav-menu">
-          <ul class="mobile-nav list">
-            <li class="mobile-nav-list">
-              <a class="mobile-nav-link link current" href="./index.html">Студія</a>
-            </li>
-            <li class="mobile-nav-list">
-              <a class="mobile-nav-link link" href="./portfolio.html">Портфоліо</a>
-            </li>
-            <li class="mobile-nav-list">
-              <a class="mobile-nav-link link" href="./index.html">Контакти</a>
-            </li>
-          </ul>
-        </nav>
-
-        <ul class="mobile-contact-nav list">
-          <li class="mobile-link">
-            <a class="mobile-link-tel link" href="tel:+380961111111"> +38 096 111 11 11</a>
-          </li>
-          <li class="mobile-link">
-            <a class="mobile-link-mail link" href="mailto:info@devstudio.com"
-              >info@devstudio.com
-            </a>
-          </li>
-        </ul>
-
-        <ul class="mobile-social-list list">
-          <li class="mobile-social-item">
-            <a class="mobile-social-link link" href="https://www.instagram.com/"> Instagram </a>
-          </li>
-          <li class="mobile-social-item">
-            <a class="mobile-social-link link" href="https://twitter.com/"> Twitter </a>
-          </li>
-          <li class="mobile-social-item">
-            <a class="mobile-social-link link" href="https://www.facebook.com/"> Facebook </a>
-          </li>
-          <li class="mobile-social-item">
-            <a class="mobile-social-link link" href="https://www.linkedin.com/"> LinkedIn </a>
-          </li>
-        </ul>
+        </button>        
       </div> -->
-      <!-- Mobail menu view end -->
+      <!-- Mobail menu view (first version) end -->
     </header>
 
     <main>
-      <!-- <section class="main-section">
+      <section class="main-section">
         <div class="container">
           <h1 class="main-section__title">Ефективні рішення для вашого бізнесу</h1>
           <button class="main-section__btn" type="button" data-modal-open>Замовити послугу</button>
         </div>
-      </section> -->
+      </section>
 
       <section class="benefits">
         <div class="container">
@@ -548,8 +516,64 @@
 
     <!-- modal window end -->
 
+    <!-- Mobile menu -->
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg width="40" height="40" aria-label="Menue switch">
+          <use class="js-close-menu" href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <nav class="mobile-nav-menu">
+        <ul class="mobile-nav list">
+          <li class="mobile-nav-list">
+            <a class="mobile-nav-link link current" href="./index.html">Студія</a>
+          </li>
+          <li class="mobile-nav-list">
+            <a class="mobile-nav-link link" href="./portfolio.html">Портфоліо</a>
+          </li>
+          <li class="mobile-nav-list">
+            <a class="mobile-nav-link link" href="./index.html">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="mobile-contact-nav list">
+        <li class="mobile-link">
+          <a class="mobile-link-tel link" href="tel:+380961111111"> +38 096 111 11 11</a>
+        </li>
+        <li class="mobile-link">
+          <a class="mobile-link-mail link" href="mailto:info@devstudio.com">info@devstudio.com </a>
+        </li>
+      </ul>
+
+      <ul class="mobile-social-list list">
+        <li class="mobile-social-item">
+          <a class="mobile-social-link link" href="https://www.instagram.com/"> Instagram </a>
+        </li>
+        <li class="mobile-social-item">
+          <a class="mobile-social-link link" href="https://twitter.com/"> Twitter </a>
+        </li>
+        <li class="mobile-social-item">
+          <a class="mobile-social-link link" href="https://www.facebook.com/"> Facebook </a>
+        </li>
+        <li class="mobile-social-item">
+          <a class="mobile-social-link link" href="https://www.linkedin.com/"> LinkedIn </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Mobile menue end -->
+
     <!-- підключили скріпт модального вікна -->
     <script src="./js/modal.js"></script>
-    <script src="./js/menue.js"></script>
+
+    <!-- скріпт вікна меню -->
+    <!-- <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script> -->
+    <script defer src="./js/menue.js"></script>
   </body>
 </html>

@@ -199,7 +199,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .nav-link {
     display: none;
   }
@@ -223,10 +223,9 @@ img {
 /* ================ MAIN SECTION (FIRST SECTION) ================*/
 .main-section {
   margin: 0 auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   max-width: 1600px;
-  height: 600px;
   background-color: var(--footer-font);
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.7)), to(rgba(47, 48, 58, 0.4))), url("../images/font.jpg");
   background-image: linear-gradient(180deg, rgba(47, 48, 58, 0.7), rgba(47, 48, 58, 0.4)), url("../images/font.jpg");
@@ -236,20 +235,40 @@ img {
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); /* тінь - фон */
 }
+@media screen and (min-width: 1200px) {
+  .main-section {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    height: 600px;
+  }
+}
 
 .main-section__title {
   margin-top: 0; /* скидаю марджин */
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  width: 696px; /* ширина тексту основного */
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-align: center;
   text-transform: uppercase;
   color: var(--main-background-color);
+}
+@media screen and (min-width: 768px) {
+  .main-section__title {
+    width: 360px; /* ширина тексту основного */
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main-section__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    width: 696px; /* ширина тексту основного */
+  }
 }
 
 .logo {
@@ -266,7 +285,7 @@ img {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .logo {
     padding-top: 16px;
     padding-bottom: 16px;
@@ -1415,55 +1434,6 @@ textarea {
   background-color: var(--accent-color);
 }
 
-.mobile-menue-container {
-  padding: 48px 40px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 796px;
-  background-color: rgb(124, 223, 245);
-}
-@media screen and (max-width: 767px) {
-  .mobile-menue-container {
-    display: none;
-  }
-  .mobile-menue-container.is-open {
-    display: block;
-  }
-}
-
-.icon-close {
-  display: none;
-}
-
-.mobile-menue-btn.is-open .icon-close {
-  display: block;
-}
-
-.mobile-menue-btn.is-open .icon-menue {
-  display: block;
-}
-
-.mobile-menue-btn {
-  position: absolute;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  top: 10px;
-  right: 15px;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-@media screen and (min-width: 768px) {
-  .mobile-menue-btn {
-    display: none;
-  }
-}
-
 .mobile-nav-menu {
   margin-bottom: 306px;
 }
@@ -1533,4 +1503,65 @@ textarea {
 
 .mobile-social-link:hover, .mobile-social-link:focus, .mobile-social-link:active, .mobile-social-link:visited {
   color: var(--accent-color);
+}
+
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: #fff;
+  z-index: 999;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */

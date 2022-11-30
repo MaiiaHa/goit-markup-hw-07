@@ -1,49 +1,51 @@
-// меню на мобільному
+// меню на мобільному (first version)
 
-.mobile-menue-container {
-  padding: 48px 40px;
-  // display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 796px;
-  background-color: rgb(124, 223, 245);
+// .mobile-menue-container {
+//   padding: 48px 40px;
+//   // display: none;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 796px;
+//   background-color: rgb(124, 223, 245);
 
-  @media screen and (max-width: 767px) {
-    display: none;
+//   @media screen and (max-width: 767px) {
+//     display: none;
 
-    &.is-open {
-      display: block;
-    }
-  }
-}
-.icon-close {
-  display: none;
-}
+//     &.is-open {
+//       display: block;
+//     }
+//   }
+// }
+// .icon-close {
+//   display: none;
+// }
 
-.mobile-menue-btn.is-open .icon-close {
-  display: block;
-}
-.mobile-menue-btn.is-open .icon-menue {
-  display: block;
-}
-.mobile-menue-btn {
-  position: absolute;
-  display: inline-flex;
+// .mobile-menue-btn.is-open .icon-close {
+//   display: block;
+// }
+// .mobile-menue-btn.is-open .icon-menue {
+//   display: block;
+// }
+// .mobile-menue-btn {
+//   position: absolute;
+//   display: inline-flex;
 
-  top: 10px;
-  right: 15px;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
+//   top: 10px;
+//   right: 15px;
+//   margin: 0;
+//   padding: 0;
+//   border: none;
+//   background-color: transparent;
+//   cursor: pointer;
 
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-}
+//   @media screen and (min-width: 768px) {
+//     display: none;
+//   }
+// }
+
+// first version end
 
 // навігація мобільного меню
 
@@ -107,4 +109,59 @@
   &:visited {
     color: var(--accent-color);
   }
+}
+
+// Mobile menu REPETA
+
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: #fff;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
 }
