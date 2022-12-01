@@ -58,6 +58,14 @@
             >
           </li>
         </ul>
+
+        <!-- Mobile menu button  -->
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="40" height="40" aria-label="Menue switch">
+            <use class="js-open-menu" href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <!-- Mobile menu button end -->
       </div>
     </header>
 
@@ -346,5 +354,55 @@
         </div>
       </div>
     </footer>
+
+    <!-- Mobile menu -->
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg width="40" height="40" aria-label="Menue switch">
+          <use class="js-close-menu" href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <nav class="mobile-nav-menu">
+        <ul class="mobile-nav list">
+          <li class="mobile-nav-list">
+            <a class="mobile-nav-link link" href="./index.html">Студія</a>
+          </li>
+          <li class="mobile-nav-list">
+            <a class="mobile-nav-link link current" href="./portfolio.html">Портфоліо</a>
+          </li>
+          <li class="mobile-nav-list">
+            <a class="mobile-nav-link link" href="./index.html">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="mobile-contact-nav list">
+        <li class="mobile-link">
+          <a class="mobile-link-tel link" href="tel:+380961111111"> +38 096 111 11 11</a>
+        </li>
+        <li class="mobile-link">
+          <a class="mobile-link-mail link" href="mailto:info@devstudio.com">info@devstudio.com </a>
+        </li>
+      </ul>
+
+      <ul class="mobile-social-list list">
+        <li class="mobile-social-item">
+          <a class="mobile-social-link link" href="https://www.instagram.com/"> Instagram </a>
+        </li>
+        <li class="mobile-social-item">
+          <a class="mobile-social-link link" href="https://twitter.com/"> Twitter </a>
+        </li>
+        <li class="mobile-social-item">
+          <a class="mobile-social-link link" href="https://www.facebook.com/"> Facebook </a>
+        </li>
+        <li class="mobile-social-item">
+          <a class="mobile-social-link link" href="https://www.linkedin.com/"> LinkedIn </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Mobile menue end -->
+
+    <script defer src="./js/menue.js"></script>
   </body>
 </html>

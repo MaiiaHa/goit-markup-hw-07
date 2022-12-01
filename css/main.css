@@ -307,6 +307,8 @@ img {
 }
 
 .footer-logo {
+  padding-top: 0px;
+  padding-bottom: 0px;
   color: var(--main-background-color);
   -webkit-transition-property: color;
   transition-property: color;
@@ -689,7 +691,6 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .team__item:not(:last-child) {
-    margin-right: 30px;
     margin-bottom: 0px;
   }
 }
