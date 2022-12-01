@@ -38,10 +38,6 @@
 
 .choice-btn:not(:last-child) {
   @extend %btn;
-
-  @media screen and (min-width: $tablet) {
-    margin-right: 8px;
-  }
 }
 .works-btn {
   @extend %btn;

@@ -357,12 +357,6 @@ img {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-@media screen and (min-width: 768px) {
-  .choice-btn:not(:last-child) {
-    margin-right: 8px;
-  }
-}
-
 .works-btn {
   display: block;
   padding: 6px 25px; /* відступи тексту на кнопці */
@@ -1233,14 +1227,6 @@ img {
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
-@media screen and (min-width: 1200px) {
-  .works-choise {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-bottom: 50px; /* padding-top: 94px; */
-  }
-}
 @media screen and (min-width: 480px) {
   .works-choise {
     -ms-flex-wrap: wrap;
@@ -1249,6 +1235,19 @@ img {
     -webkit-column-gap: 15px;
        -moz-column-gap: 15px;
             column-gap: 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .works-choise {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 30px; /* padding-top: 94px; */
+  }
+}
+@media screen and (min-width: 1200px) {
+  .works-choise {
+    margin-bottom: 50px; /* padding-top: 94px; */
   }
 }
 
