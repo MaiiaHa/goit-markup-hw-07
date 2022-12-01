@@ -43,6 +43,9 @@
 .works-list {
   margin-top: 0;
 
+  /* max-width: calc((100% - 30px * 2) / 3); ширина flex-елемента - картка - 370px */
+  flex-basis: calc((100% - 30px * 2) / 3);
+
   &:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -50,10 +53,9 @@
   @media screen and (min-width: $tablet) {
     &:not(:last-child) {
       margin-bottom: 0px;
+      flex-basis: calc((100% - 30px * 2) / 2);
     }
   }
-  /* max-width: calc((100% - 30px * 2) / 3); ширина flex-елемента - картка - 370px */
-  flex-basis: calc((100% - 30px * 2) / 3);
 }
 
 .works-link {

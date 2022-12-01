@@ -1274,6 +1274,8 @@ img {
 @media screen and (min-width: 768px) {
   .works-list:not(:last-child) {
     margin-bottom: 0px;
+    -ms-flex-preferred-size: calc((100% - 60px) / 2);
+        flex-basis: calc((100% - 60px) / 2);
   }
 }
 
