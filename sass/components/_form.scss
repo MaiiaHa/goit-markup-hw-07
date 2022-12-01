@@ -81,15 +81,17 @@ textarea {
   justify-content: center;
   /* align-items: flex-start; */
   color: var(--secondary-font-color);
-  @include fonts(false, 14px, 24px, 0.03em);
 
+  @include fonts(false, 12px, 14px, 0.03em);
+
+  @media screen and (min-width: $desctop) {
+    @include fonts(false, 14px, 24px, 0.03em);
+  }
   margin-bottom: 4px;
   margin-top: 20px;
   margin-bottom: 30px;
 }
 .conditions {
-  @include fonts(false, 14px, 24px, 0.03em);
-
   color: var(--secondary-font-color);
 }
 .conditions-link {
@@ -98,8 +100,13 @@ textarea {
 .form-checkbox {
   appearance: none;
 
-  margin-left: 14px;
-  margin-right: 7px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+  @media screen and (min-width: $desctop) {
+    margin-left: 14px;
+    margin-right: 7px;
+  }
   width: 16px;
   height: 15px;
 
