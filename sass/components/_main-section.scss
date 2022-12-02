@@ -7,8 +7,6 @@
   max-width: 1600px;
 
   background-color: var(--footer-font);
-  background-image: linear-gradient(180deg, rgba(47, 48, 58, 0.7), rgba(47, 48, 58, 0.4)),
-    url('../images/main/font.jpg');
   background-size: cover; /* вписуєм зображення і обрізаєм */
   background-repeat: no-repeat;
   background-position: center;
@@ -20,7 +18,45 @@
     padding-bottom: 200px;
     height: 600px;
   }
+
+  // ДО 480 ПІКСЕЛІВ MOBILE BACKGROUND
+
+  // mobile screen
+  background-image: linear-gradient(180deg, rgba(47, 48, 58, 0.7), rgba(47, 48, 58, 0.4)),
+    url('../images/main/bg_sm@1x.jpg');
+  // mobile screen retina
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(180deg, rgba(47, 48, 58, 0.7), rgba(47, 48, 58, 0.4)),
+      url('../images/main/bg_sm@2x.jpg');
+  }
+
+  // 481 I БІЛЬШЕ TABLET  BACKGROUND
+
+  @media screen and (min-width: 481px) {
+    // tablet screen
+    background-image: linear-gradient(180deg, rgba(47, 48, 58, 0.7), rgba(47, 48, 58, 0.4)),
+      url('../images/main/bg_md@1x.jpg');
+    // tablet screen retina
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(180deg, rgba(47, 48, 58, 0.7), rgba(47, 48, 58, 0.4)),
+        url('../images/main/bg_md@2x.jpg');
+    }
+  }
+
+  // DESCTOP  BACKGROUND
+
+  @media screen and (min-width: 769px) {
+    // desctop screen
+    background-image: linear-gradient(180deg, rgba(47, 48, 58, 0.7), rgba(47, 48, 58, 0.4)),
+      url('../images/main/bg_lg@1x.jpg');
+    // desctop screen retina
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(180deg, rgba(47, 48, 58, 0.7), rgba(47, 48, 58, 0.4)),
+        url('../images/main/bg_lg@2x.jpg');
+    }
+  }
 }
+
 .main-section__title {
   margin-top: 0; /* скидаю марджин */
   margin-bottom: 30px;
