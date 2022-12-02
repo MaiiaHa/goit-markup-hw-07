@@ -18,7 +18,7 @@ $icons: 'antenna', 'clock', 'diagram', 'astronaut';
 @mixin generateIcons($icons) {
   @each $iconName in $icons {
     .benefits__item--#{$iconName}::before {
-      background-image: url('../images/#{$iconName}.svg');
+      background-image: url('../images/icons-benefits/#{$iconName}.svg');
     }
   }
 }
