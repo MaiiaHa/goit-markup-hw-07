@@ -4,7 +4,7 @@
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto; /* або margin-left margin-right - auto */
-  outline: 1px solid tomato;
+  // outline: 1px solid tomato;
 
   @media screen and (min-width: $mobile) {
     width: 480px;
